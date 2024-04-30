@@ -165,7 +165,7 @@ aws_lb_listener_http_listener_node_exporter_default_action_type = "forward"
 null_resource_get_argocd_admin_password_remote_exec_inline    = "sudo -u ubuntu /snap/bin/kubectl get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' -n argocd | base64 -d > /tmp/secrets.txt"
 null_resource_get_argocd_admin_password_connection_type       = "ssh"
 null_resource_get_argocd_admin_password_connection_user       = "ubuntu"
-null_resource_output_argocd_admin_password_remote_exec_inline = "sudo -u ubuntu /snap/bin/aws s3 cp /tmp/secrets.txt s3://eks-netflix-argocd/secrets.txt"
+null_resource_output_argocd_admin_password_remote_exec_inline = "sudo -u ubuntu /usr/bin/aws s3 cp /tmp/secrets.txt s3://eks-netflix-argocd/secrets.txt"
 null_resource_output_argocd_admin_password_connection_type    = "ssh"
 null_resource_output_argocd_admin_password_connection_user    = "ubuntu"
 
