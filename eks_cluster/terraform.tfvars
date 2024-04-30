@@ -18,7 +18,7 @@ port_9443               = 9443
 port_3306               = 3306
 security_group_protocol = "tcp"
 web_cidr                = "0.0.0.0/0"
-private_ip_address      = "70.51.61.104/32"
+private_ip_address      = "x.x.x.x"
 
 # vpc
 vpc_cidr_block                   = "10.0.0.0/16"
@@ -81,7 +81,7 @@ aws_instance_eks_cluster_netflix_bastion_host_file_user = "ubuntu"
 # asg
 key_pair_name                                                 = "web-ec2"
 aws_launch_template_netflix_name_prefix                       = "netflix-launch-template"
-aws_launch_template_netflix_image_id                          = "ami-03ebcff1a0c1bb985"
+aws_launch_template_netflix_image_id                          = "ami-04d59434fdd830494"
 aws_launch_template_netflix_instance_type                     = "m5.large"
 aws_launch_template_netflix_block_device_mappings_device_name = "xvdc"
 aws_launch_template_netflix_block_device_mappings_volume_size = 20
@@ -178,7 +178,7 @@ aws_iam_policy_attachment_eks_ec2_container_registry_readonly_name       = "eks_
 aws_iam_policy_attachment_eks_ec2_container_registry_readonly_policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 
 # bastion
-aws_instance_eks_cluster_netflix_bastion_host_ami                     = "ami-03ebcff1a0c1bb985"
+aws_instance_eks_cluster_netflix_bastion_host_ami                     = "ami-04d59434fdd830494"
 aws_instance_eks_cluster_netflix_bastion_host_instance_type           = "t2.micro"
 aws_instance_eks_cluster_netflix_bastion_host_tags                    = "bastion-host"
 aws_instance_eks_cluster_netflix_bastion_host_provisioner_destination = "/home/ubuntu/web-ec2.pem"
